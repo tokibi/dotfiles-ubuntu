@@ -1,0 +1,16 @@
+# Last Modified: Sat Aug  4 20:29:12 2018
+#include <tunables/global>
+
+/usr/local/bin/xkeysnail {
+  #include <abstractions/X>
+  #include <abstractions/base>
+  #include <abstractions/lightdm>
+  #include <abstractions/python>
+
+  capability dac_override,
+  capability dac_read_search,
+
+  /lib/x86_64-linux-gnu/ld-*.so mr,
+  owner /home/*/.local/lib/python3.6/site-packages/ r,
+
+}
