@@ -20,5 +20,7 @@ template "/home/#{node[:user]}/.config/redshift.conf" do
 end
 
 template "/home/#{node[:user]}/.config/autostart/redshift-gtk.desktop" do
+  owner node[:user].to_s
+  group node[:user].to_s
   source "files/redshift/redshift-gtk.desktop"
 end
