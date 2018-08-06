@@ -1,11 +1,6 @@
 import re
 from xkeysnail.transform import *
 
-define_modmap({
-    Key.LEFT_ALT: Key.LEFT_CTRL,
-    Key.RIGHT_ALT: Key.LEFT_CTRL,
-})
-
 # Oneshot modifier
 define_multipurpose_modmap({
     Key.SPACE:    [Key.SPACE,    Key.LEFT_SHIFT],
@@ -39,3 +34,7 @@ define_keymap(None, {
     # Delete
     K("M-d"): K("delete"),
 }, "cursor move")
+
+define_keymap(re.compile(""), {
+    K("M-u"): K("C-u")
+}, "Terminal")
