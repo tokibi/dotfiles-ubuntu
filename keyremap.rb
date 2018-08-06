@@ -2,6 +2,9 @@ package 'python3-pip' do
   action :install
 end
 
+# keyrepat
+execute "xset r rate 200 30"
+
 # xsession
 template "/home/#{node[:user]}/.xsessionrc" do
   owner node[:user].to_s
